@@ -23,12 +23,14 @@ public class Equation {
         operators.put("/", 2);
         operators.put("^", 2);
     }
+    private static final String operator = String.join("|", operators.keySet()) + "|\\(|\\)";
+    private static final String equationSeparator = "(?<=(" + operator + ") | (?=" + operator + "))";
 
     public Equation(String e) {
         checkEquation(e);
         original = e;
         equation = clean(original);
-        String[] args = equation.split(String.join("|", operators.keySet()) + "|\\(|\\)");
+        String[] args = equation.split(equationSeparator);
         eq = new ArrayDeque<>();
         parse(equation, args, eq);
     }
@@ -65,8 +67,8 @@ public class Equation {
         }
     }
 
-    private double evaluateOperator(String operator, double[] args) {
-        switch (operator) {
+    private double evaluateOperator(String op, double[] args) {
+        switch (op) {
             case "+":
                 return args[0] + args[1];
             case "-":
@@ -90,7 +92,7 @@ public class Equation {
         return o.replaceAll("\\s", "");
     }
 
-    private void parse(String e, ArrayDeque s) {
+    private void parse(String e, String[] args, ArrayDeque eq) {
         for (int i = 0; i < e.length(); i++) {
             String t = Character.toString(e.charAt(i));
             if (operators.containsKey(t)) {
