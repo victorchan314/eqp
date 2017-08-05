@@ -28,8 +28,9 @@ public class Equation {
         checkEquation(e);
         original = e;
         equation = clean(original);
+        String[] args = equation.split(String.join("|", operators.keySet()) + "|\\(|\\)");
         eq = new ArrayDeque<>();
-        parse(equation, eq);
+        parse(equation, args, eq);
     }
 
     public String getEquation() {
@@ -92,6 +93,15 @@ public class Equation {
     private void parse(String e, ArrayDeque s) {
         for (int i = 0; i < e.length(); i++) {
             String t = Character.toString(e.charAt(i));
+            if (operators.containsKey(t)) {
+
+            } else if (t.equals("(")) {
+
+            } else if (t.equals(")")) {
+
+            } else {
+
+            }
         }
     }
 
