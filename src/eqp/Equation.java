@@ -157,6 +157,8 @@ public class Equation {
                 } catch (EmptyStackException e) {
                     throw new IllegalArgumentException("Parentheses mismatched");
                 }
+            } else if (t.equals(x)) {
+                eq.add(t);
             } else {
                 throw new IllegalArgumentException("Illegal argument entered");
             }

@@ -5,9 +5,11 @@ import eqp.Equation;
 public class Test {
 
     public static void main(String[] args) {
-        String equation = "3 + 5";
+        String equation = "x^2 - 5";
         Equation e = new Equation(equation);
+        System.out.println(e.evaluate(1));
         System.out.println(e.evaluate(5));
+        System.out.println(e.evaluate(-2));
     }
 
 }
