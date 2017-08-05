@@ -21,8 +21,8 @@
       <file leaf-file-name="Equation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="160" column="75" lean-forward="false" selection-start-line="160" selection-start-column="75" selection-end-line="160" selection-end-column="75" />
+            <state relative-caret-position="510">
+              <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##1;class#Equation#0" expanded="false" />
@@ -30,13 +30,13 @@
                 <element signature="e#3413#3414#0" expanded="true" />
                 <element signature="e#5014#5015#0" expanded="true" />
                 <element signature="e#5060#5061#0" expanded="true" />
-                <element signature="e#6281#6282#0" expanded="true" />
-                <element signature="e#6323#6324#0" expanded="true" />
-                <element signature="e#6366#6367#0" expanded="true" />
-                <element signature="e#6408#6409#0" expanded="true" />
-                <element signature="e#6458#6459#0" expanded="true" />
-                <element signature="e#6505#6506#0" expanded="true" />
-                <marker date="1501934233000" expanded="false" signature="1123:3131" ph="..." />
+                <element signature="e#6375#6376#0" expanded="true" />
+                <element signature="e#6417#6418#0" expanded="true" />
+                <element signature="e#6460#6461#0" expanded="true" />
+                <element signature="e#6502#6503#0" expanded="true" />
+                <element signature="e#6552#6553#0" expanded="true" />
+                <element signature="e#6599#6600#0" expanded="true" />
+                <marker date="1501934553000" expanded="false" signature="1123:3131" ph="..." />
               </folding>
             </state>
           </provider>
@@ -290,8 +290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="160" column="75" lean-forward="false" selection-start-line="160" selection-start-column="75" selection-end-line="160" selection-end-column="75" />
+        <state relative-caret-position="510">
+          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##1;class#Equation#0" expanded="false" />
@@ -299,13 +299,13 @@
             <element signature="e#3413#3414#0" expanded="true" />
             <element signature="e#5014#5015#0" expanded="true" />
             <element signature="e#5060#5061#0" expanded="true" />
-            <element signature="e#6281#6282#0" expanded="true" />
-            <element signature="e#6323#6324#0" expanded="true" />
-            <element signature="e#6366#6367#0" expanded="true" />
-            <element signature="e#6408#6409#0" expanded="true" />
-            <element signature="e#6458#6459#0" expanded="true" />
-            <element signature="e#6505#6506#0" expanded="true" />
-            <marker date="1501934233000" expanded="false" signature="1123:3131" ph="..." />
+            <element signature="e#6375#6376#0" expanded="true" />
+            <element signature="e#6417#6418#0" expanded="true" />
+            <element signature="e#6460#6461#0" expanded="true" />
+            <element signature="e#6502#6503#0" expanded="true" />
+            <element signature="e#6552#6553#0" expanded="true" />
+            <element signature="e#6599#6600#0" expanded="true" />
+            <marker date="1501934553000" expanded="false" signature="1123:3131" ph="..." />
           </folding>
         </state>
       </provider>

@@ -161,6 +161,9 @@ public class Equation {
                 throw new IllegalArgumentException("Illegal argument entered");
             }
         }
+        while (!operatorStack.isEmpty()) {
+            eq.add(operatorStack.pop());
+        }
     }
 
     private int getNArgs(String t) {
