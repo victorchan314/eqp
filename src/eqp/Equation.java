@@ -25,7 +25,7 @@ public class Equation {
         operators.put("/", new Integer[]{2, 20, 0});
         operators.put("^", new Integer[]{2, 30, 1});
     }
-    private static final String operator = String.join("|", operators.keySet()) + "|\\(|\\)";
+    private static final String operator = "\\" + String.join("|\\", operators.keySet()) + "|\\(|\\)";
     private static final String equationSeparator = "(?<=(" + operator + ") | (?=" + operator + "))";
 
     private static final String Digits;
