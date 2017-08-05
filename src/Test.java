@@ -7,7 +7,7 @@ public class Test {
     public static void main(String[] args) {
         String equation = "3 + 5";
         Equation e = new Equation(equation);
-        e.evaluate(5);
+        System.out.println(e.evaluate(5));
     }
 
 }
