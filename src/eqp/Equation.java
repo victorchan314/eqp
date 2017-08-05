@@ -11,7 +11,10 @@ public class Equation {
     private String equation;
     private Stack<String> eq;
 
+    private String[] operators = {"+", "-", "*", "/"};
+
     public Equation(String e) {
+        checkEquation(e);
         original = e;
         equation = clean(original);
         eq = new Stack<>();
@@ -24,6 +27,10 @@ public class Equation {
 
     public double evaluate(double n) {
         Stack<String> s = (Stack<String>) eq.clone();
+    }
+
+    public void checkEquation(String e) {
+
     }
 
     private String clean(String o) {
