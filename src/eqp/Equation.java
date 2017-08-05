@@ -73,6 +73,10 @@ public class Equation {
         original = e;
         equation = clean(original);
         eq = new ArrayDeque<>();
+        System.out.println(equationSeparator);
+        for (String s : equation.split(equationSeparator)) {
+            System.out.println(s);
+        }
         parse(equation.split(equationSeparator), eq);
     }
 
