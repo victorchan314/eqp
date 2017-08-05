@@ -38,14 +38,51 @@ public class Equation {
 
     public double evaluate(double n) {
         ArrayDeque<String> e = (ArrayDeque<String>) eq.clone();
-        Stack<String> s = new Stack<>();
+        Stack<Double> s = new Stack<>();
         while (!e.isEmpty()) {
-            String t = e.pop();
+            String t = e.remove();
             if (operators.containsKey(t)) {
-
+                int nargs = operators.get(t);
+                if (s.size() < nargs) {
+                    throw new IllegalArgumentException("Not enough arguments passed");
+                }
+                double[] args = new double[nargs];
+                for (int i = nargs - 1; i >= 0; i--) {
+                    args[i] = s.pop();
+                }
+                s.push(evaluateOperator(t, args));
+            } else if (t.equals(x)) {
+                s.push(n);
             } else {
-                s.push(t);
+                s.push(Double.parseDouble(t));
             }
+        }
+        if (s.size() == 1) {
+            return s.pop();
+        } else {
+            throw new IllegalArgumentException("Incorrect number of arguments passed");
+        }
+    }
+
+    private double evaluateOperator(String operator, double[] args) {
+        switch (operator) {
+            case "+":
+                return args[0] + args[1];
+                break;
+            case "-":
+                return args[0] - args[1];
+                break;
+            case "*":
+                return args[0] * args[1];
+                break;
+            case "/":
+                return args[0] / args[1];
+                break;
+            case "^":
+                return Math.pow(args[0], args[1]);
+                break;
+            default:
+                throw new IllegalStateException("Invalid operation");
         }
     }
 
