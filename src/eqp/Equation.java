@@ -11,7 +11,8 @@ public class Equation {
     private String equation;
     private Stack<String> eq;
 
-    private String[] operators = {"+", "-", "*", "/"};
+    private String[] operators = {"+", "-", "*", "/", "^", "(", ")"};
+    private String x = "x";
 
     public Equation(String e) {
         checkEquation(e);
@@ -26,7 +27,11 @@ public class Equation {
     }
 
     public double evaluate(double n) {
-        Stack<String> s = (Stack<String>) eq.clone();
+        Stack<String> e = (Stack<String>) eq.clone();
+        Stack<String> s = new Stack<>();
+        while (!e.isEmpty()) {
+
+        }
     }
 
     public void checkEquation(String e) {
