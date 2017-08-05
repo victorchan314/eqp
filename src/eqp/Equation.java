@@ -35,6 +35,8 @@ public class Equation {
             String t = e.pop();
             if (Arrays.asList(operators).contains(t)) {
 
+            } else if (Arrays.asList(brackets).contains(t)) {
+
             } else {
                 s.push(t);
             }
