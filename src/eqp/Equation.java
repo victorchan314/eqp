@@ -137,7 +137,7 @@ public class Equation {
         Stack<String> operatorStack = new Stack<>();
         for (String t : args) {
             if (Pattern.matches(fpRegex, t)) {
-                eq.add(Double.valueOf(t));
+                eq.add(t);
             } else if (operators.containsKey(t)) {
                 if (!rightAssociative(t)) {
                     int precedence = getPrecedence(t);
