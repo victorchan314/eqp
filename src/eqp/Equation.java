@@ -98,7 +98,7 @@ public class Equation {
             } else if (t.equals(x)) {
                 s.push(n);
             } else {
-                s.push(Double.parseDouble(t));
+                s.push(Double.valueOf(t));
             }
         }
         if (s.size() == 1) {

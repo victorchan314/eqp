@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd3041d8-dfc4-4eab-8487-25988eeb0591" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Equation Parser/eqp/Equation.class" afterPath="$PROJECT_DIR$/out/production/Equation Parser/eqp/Equation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/eqp/Equation.java" afterPath="$PROJECT_DIR$/src/eqp/Equation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,22 +21,22 @@
       <file leaf-file-name="Equation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="139" column="24" lean-forward="false" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="24" />
+            <state relative-caret-position="285">
+              <caret line="100" column="30" lean-forward="false" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##1;class#Equation#0" expanded="false" />
                 <element signature="e#3393#3394#0" expanded="true" />
                 <element signature="e#3424#3425#0" expanded="true" />
-                <element signature="e#5025#5026#0" expanded="true" />
-                <element signature="e#5071#5072#0" expanded="true" />
-                <element signature="e#6398#6399#0" expanded="true" />
-                <element signature="e#6440#6441#0" expanded="true" />
-                <element signature="e#6483#6484#0" expanded="true" />
-                <element signature="e#6525#6526#0" expanded="true" />
-                <element signature="e#6575#6576#0" expanded="true" />
-                <element signature="e#6622#6623#0" expanded="true" />
-                <marker date="1501945034000" expanded="false" signature="1134:3142" ph="..." />
+                <element signature="e#5021#5022#0" expanded="true" />
+                <element signature="e#5067#5068#0" expanded="true" />
+                <element signature="e#6394#6395#0" expanded="true" />
+                <element signature="e#6436#6437#0" expanded="true" />
+                <element signature="e#6479#6480#0" expanded="true" />
+                <element signature="e#6521#6522#0" expanded="true" />
+                <element signature="e#6571#6572#0" expanded="true" />
+                <element signature="e#6618#6619#0" expanded="true" />
+                <marker date="1501945126000" expanded="false" signature="1134:3142" ph="..." />
               </folding>
             </state>
           </provider>
@@ -482,22 +480,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="139" column="24" lean-forward="false" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="24" />
+        <state relative-caret-position="285">
+          <caret line="100" column="30" lean-forward="false" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##1;class#Equation#0" expanded="false" />
             <element signature="e#3393#3394#0" expanded="true" />
             <element signature="e#3424#3425#0" expanded="true" />
-            <element signature="e#5025#5026#0" expanded="true" />
-            <element signature="e#5071#5072#0" expanded="true" />
-            <element signature="e#6398#6399#0" expanded="true" />
-            <element signature="e#6440#6441#0" expanded="true" />
-            <element signature="e#6483#6484#0" expanded="true" />
-            <element signature="e#6525#6526#0" expanded="true" />
-            <element signature="e#6575#6576#0" expanded="true" />
-            <element signature="e#6622#6623#0" expanded="true" />
-            <marker date="1501945034000" expanded="false" signature="1134:3142" ph="..." />
+            <element signature="e#5021#5022#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
+            <element signature="e#6394#6395#0" expanded="true" />
+            <element signature="e#6436#6437#0" expanded="true" />
+            <element signature="e#6479#6480#0" expanded="true" />
+            <element signature="e#6521#6522#0" expanded="true" />
+            <element signature="e#6571#6572#0" expanded="true" />
+            <element signature="e#6618#6619#0" expanded="true" />
+            <marker date="1501945126000" expanded="false" signature="1134:3142" ph="..." />
           </folding>
         </state>
       </provider>
