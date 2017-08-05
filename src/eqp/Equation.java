@@ -2,6 +2,7 @@ package eqp;
 
 import java.util.Stack;
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Created by victorchan on 8/5/17.
@@ -12,9 +13,16 @@ public class Equation {
     private String equation;
     private Stack<String> eq;
 
-    private String[] operators = {"+", "-", "*", "/", "^"};
-    private String[] brackets = {"(", ")"};
-    private String x = "x";
+    private static final String x = "x";
+    private static final HashMap<String, Integer> operators;
+    static {
+        operators = new HashMap<>();
+        operators.put("+", 2);
+        operators.put("-", 2);
+        operators.put("*", 2);
+        operators.put("/", 2);
+        operators.put("^", 2);
+    }
 
     public Equation(String e) {
         checkEquation(e);
@@ -33,9 +41,7 @@ public class Equation {
         Stack<String> s = new Stack<>();
         while (!e.isEmpty()) {
             String t = e.pop();
-            if (Arrays.asList(operators).contains(t)) {
-
-            } else if (Arrays.asList(brackets).contains(t)) {
+            if (operators.containsKey(t)) {
 
             } else {
                 s.push(t);
