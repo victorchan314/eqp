@@ -28,7 +28,7 @@ public class Equation {
         checkEquation(e);
         original = e;
         equation = clean(original);
-        eq = new Deque<>();
+        eq = new ArrayDeque<>();
         parse(equation, eq);
     }
 
@@ -37,7 +37,7 @@ public class Equation {
     }
 
     public double evaluate(double n) {
-        Stack<String> e = (Stack<String>) eq.clone();
+        ArrayDeque<String> e = (ArrayDeque<String>) eq.clone();
         Stack<String> s = new Stack<>();
         while (!e.isEmpty()) {
             String t = e.pop();
@@ -57,7 +57,7 @@ public class Equation {
         return o.replaceAll("\\s", "");
     }
 
-    private void parse(String e, Stack s) {
+    private void parse(String e, ArrayDeque s) {
 
     }
 
