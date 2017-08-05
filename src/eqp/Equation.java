@@ -144,6 +144,7 @@ public class Equation {
                         eq.add(operatorStack.pop());
                     }
                 }
+                operatorStack.push(t);
             } else if (t.equals("(")) {
 
             } else if (t.equals(")")) {
