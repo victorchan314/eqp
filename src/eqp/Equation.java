@@ -18,11 +18,11 @@ public class Equation {
     private static final HashMap<String, Integer[]> operators;
     static {
         operators = new HashMap<>();
-        operators.put("+", new Integer[]{2, 2, 0});
-        operators.put("-", new Integer[]{2, 2, 0});
-        operators.put("*", new Integer[]{2, 2, 0});
-        operators.put("/", new Integer[]{2, 2, 0});
-        operators.put("^", new Integer[]{2, 1, 1});
+        operators.put("+", new Integer[]{2, 10, 0});
+        operators.put("-", new Integer[]{2, 10, 0});
+        operators.put("*", new Integer[]{2, 20, 0});
+        operators.put("/", new Integer[]{2, 20, 0});
+        operators.put("^", new Integer[]{2, 30, 1});
     }
     private static final String operator = String.join("|", operators.keySet()) + "|\\(|\\)";
     private static final String equationSeparator = "(?<=(" + operator + ") | (?=" + operator + "))";
@@ -85,7 +85,7 @@ public class Equation {
         while (!e.isEmpty()) {
             String t = e.remove();
             if (operators.containsKey(t)) {
-                int nargs = operators.get(t)[0];
+                int nargs = getNArgs(t);
                 if (s.size() < nargs) {
                     throw new IllegalArgumentException("Not enough arguments passed");
                 }
@@ -138,7 +138,12 @@ public class Equation {
             if (Pattern.matches(fpRegex, t)) {
                 eq.add(Double.valueOf(t));
             } else if (operators.containsKey(t)) {
-
+                if (!rightAssociative(t)) {
+                    int precedence = getPrecedence(t);
+                    while (getPrecedence(operatorStack.peek()) >= precedence) {
+                        eq.add(operatorStack.pop());
+                    }
+                }
             } else if (t.equals("(")) {
 
             } else if (t.equals(")")) {
@@ -147,6 +152,18 @@ public class Equation {
 
             }
         }
+    }
+
+    private int getNArgs(String t) {
+        return operators.get(t)[0];
+    }
+
+    private int getPrecedence(String t) {
+        return operators.get(t)[1];
+    }
+
+    private boolean rightAssociative(String t) {
+        return operators.get(t)[2] == 1;
     }
 
 }
