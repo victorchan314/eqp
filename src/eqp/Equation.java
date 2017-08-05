@@ -26,7 +26,7 @@ public class Equation {
         operators.put("^", new Integer[]{2, 30, 1});
     }
     private static final String operator = "\\" + String.join("|\\", operators.keySet()) + "|\\(|\\)";
-    private static final String equationSeparator = "((?<=(" + operator + ")) | (?=(" + operator + ")))";
+    private static final String equationSeparator = "((?<=(" + operator + "))|(?=(" + operator + ")))";
 
     private static final String Digits;
     private static final String HexDigits;
@@ -73,13 +73,6 @@ public class Equation {
         original = e;
         equation = clean(original);
         eq = new ArrayDeque<>();
-        System.out.println(equationSeparator);
-        for (String s : equation.split("((?<=\\+)|(?=\\+))")) {
-            System.out.println(s);
-        }
-        for (String s :equation.split(equationSeparator)) {
-            System.out.println(s);
-        }
         parse(equation.split(equationSeparator), eq);
     }
 
