@@ -1,6 +1,7 @@
 package eqp;
 
 import java.util.Stack;
+import java.util.Arrays;
 
 /**
  * Created by victorchan on 8/5/17.
@@ -11,7 +12,8 @@ public class Equation {
     private String equation;
     private Stack<String> eq;
 
-    private String[] operators = {"+", "-", "*", "/", "^", "(", ")"};
+    private String[] operators = {"+", "-", "*", "/", "^"};
+    private String[] brackets = {"(", ")"};
     private String x = "x";
 
     public Equation(String e) {
@@ -30,7 +32,12 @@ public class Equation {
         Stack<String> e = (Stack<String>) eq.clone();
         Stack<String> s = new Stack<>();
         while (!e.isEmpty()) {
+            String t = e.pop();
+            if (Arrays.asList(operators).contains(t)) {
 
+            } else {
+                s.push(t);
+            }
         }
     }
 
