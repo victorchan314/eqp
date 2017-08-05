@@ -141,7 +141,7 @@ public class Equation {
             } else if (operators.containsKey(t)) {
                 if (!rightAssociative(t)) {
                     int precedence = getPrecedence(t);
-                    while (getPrecedence(operatorStack.peek()) >= precedence) {
+                    while (!operatorStack.isEmpty() && getPrecedence(operatorStack.peek()) >= precedence) {
                         eq.add(operatorStack.pop());
                     }
                 }
