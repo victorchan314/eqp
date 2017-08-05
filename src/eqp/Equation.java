@@ -1,5 +1,6 @@
 package eqp;
 
+import java.util.EmptyStackException;
 import java.util.Stack;
 import java.util.ArrayDeque;
 import java.util.HashMap;
@@ -146,11 +147,18 @@ public class Equation {
                 }
                 operatorStack.push(t);
             } else if (t.equals("(")) {
-
+                eq.add(t);
             } else if (t.equals(")")) {
-
+                try {
+                    while (!operatorStack.peek().equals("(")) {
+                        eq.add(operatorStack.pop());
+                    }
+                    operatorStack.pop();
+                } catch (EmptyStackException e) {
+                    throw new IllegalArgumentException("Parentheses mismatched");
+                }
             } else {
-
+                throw new IllegalArgumentException("Illegal argument entered");
             }
         }
     }
