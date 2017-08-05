@@ -1,7 +1,7 @@
 package eqp;
 
 import java.util.Stack;
-import java.util.Arrays;
+import java.util.ArrayDeque;
 import java.util.HashMap;
 
 /**
@@ -11,7 +11,7 @@ public class Equation {
 
     private String original;
     private String equation;
-    private Stack<String> eq;
+    private ArrayDeque<String> eq;
 
     private static final String x = "x";
     private static final HashMap<String, Integer> operators;
@@ -28,7 +28,7 @@ public class Equation {
         checkEquation(e);
         original = e;
         equation = clean(original);
-        eq = new Stack<>();
+        eq = new Deque<>();
         parse(equation, eq);
     }
 
