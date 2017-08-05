@@ -19,8 +19,8 @@
       <file leaf-file-name="Equation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="123" column="7" lean-forward="false" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##1;class#Equation#0" expanded="false" />
@@ -34,7 +34,7 @@
                 <element signature="e#6502#6503#0" expanded="true" />
                 <element signature="e#6552#6553#0" expanded="true" />
                 <element signature="e#6599#6600#0" expanded="true" />
-                <marker date="1501934553000" expanded="false" signature="1123:3131" ph="..." />
+                <marker date="1501934688000" expanded="false" signature="1123:3131" ph="..." />
               </folding>
             </state>
           </provider>
@@ -288,8 +288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="123" column="7" lean-forward="false" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##1;class#Equation#0" expanded="false" />
@@ -303,7 +303,7 @@
             <element signature="e#6502#6503#0" expanded="true" />
             <element signature="e#6552#6553#0" expanded="true" />
             <element signature="e#6599#6600#0" expanded="true" />
-            <marker date="1501934553000" expanded="false" signature="1123:3131" ph="..." />
+            <marker date="1501934688000" expanded="false" signature="1123:3131" ph="..." />
           </folding>
         </state>
       </provider>
