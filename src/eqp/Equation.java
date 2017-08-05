@@ -15,50 +15,57 @@ public class Equation {
     private ArrayDeque<String> eq;
 
     private static final String x = "x";
-    private static final HashMap<String, Integer> operators;
+    private static final HashMap<String, Integer[]> operators;
     static {
         operators = new HashMap<>();
-        operators.put("+", 2);
-        operators.put("-", 2);
-        operators.put("*", 2);
-        operators.put("/", 2);
-        operators.put("^", 2);
+        operators.put("+", new Integer[]{2, 2, 0});
+        operators.put("-", new Integer[]{2, 2, 0});
+        operators.put("*", new Integer[]{2, 2, 0});
+        operators.put("/", new Integer[]{2, 2, 0});
+        operators.put("^", new Integer[]{2, 1, 1});
     }
     private static final String operator = String.join("|", operators.keySet()) + "|\\(|\\)";
     private static final String equationSeparator = "(?<=(" + operator + ") | (?=" + operator + "))";
 
-    private final String Digits     = "(\\p{Digit}+)";
-    private final String HexDigits  = "(\\p{XDigit}+)";
-    // an exponent is 'e' or 'E' followed by an optionally
+    private static final String Digits;
+    private static final String HexDigits;
+    private static final String Exp;
+    private static final String fpRegex;
+    static {
+        Digits = "(\\p{Digit}+)";
+        HexDigits = "(\\p{XDigit}+)";
+        // an exponent is 'e' or 'E' followed by an optionally
 // signed decimal integer.
-    private final String Exp        = "[eE][+-]?"+Digits;
-    private final String fpRegex    =
-            ("[\\x00-\\x20]*"+ // Optional leading "whitespace"
-                    "[+-]?(" +         // Optional sign character
-                    "NaN|" +           // "NaN" string
-                    "Infinity|" +      // "Infinity" string
-                    // A decimal floating-point string representing a finite positive
-                    // number without a leading sign has at most five basic pieces:
-                    // Digits . Digits ExponentPart FloatTypeSuffix
-                    //
-                    // Since this method allows integer-only strings as input
-                    // in addition to strings of floating-point literals, the
-                    // two sub-patterns below are simplifications of the grammar
-                    // productions from the Java Language Specification, 2nd
-                    // edition, section 3.10.2.
-                    // Digits ._opt Digits_opt ExponentPart_opt FloatTypeSuffix_opt
-                    "((("+Digits+"(\\.)?("+Digits+"?)("+Exp+")?)|"+
-                    // . Digits ExponentPart_opt FloatTypeSuffix_opt
-                    "(\\.("+Digits+")("+Exp+")?)|"+
-                    // Hexadecimal strings
-                    "((" +
-                    // 0[xX] HexDigits ._opt BinaryExponent FloatTypeSuffix_opt
-                    "(0[xX]" + HexDigits + "(\\.)?)|" +
-                    // 0[xX] HexDigits_opt . HexDigits BinaryExponent FloatTypeSuffix_opt
-                    "(0[xX]" + HexDigits + "?(\\.)" + HexDigits + ")" +
-                    ")[pP][+-]?" + Digits + "))" +
-                    "[fFdD]?))" +
-                    "[\\x00-\\x20]*");// Optional trailing "whitespace"
+        Exp = "[eE][+-]?" + Digits;
+        fpRegex =
+                ("[\\x00-\\x20]*" + // Optional leading "whitespace"
+                        "[+-]?(" +         // Optional sign character
+                        "NaN|" +           // "NaN" string
+                        "Infinity|" +      // "Infinity" string
+                        // A decimal floating-point string representing a finite positive
+                        // number without a leading sign has at most five basic pieces:
+                        // Digits . Digits ExponentPart FloatTypeSuffix
+                        //
+                        // Since this method allows integer-only strings as input
+                        // in addition to strings of floating-point literals, the
+                        // two sub-patterns below are simplifications of the grammar
+                        // productions from the Java Language Specification, 2nd
+                        // edition, section 3.10.2.
+                        // Digits ._opt Digits_opt ExponentPart_opt FloatTypeSuffix_opt
+                        "(((" + Digits + "(\\.)?(" + Digits + "?)(" + Exp + ")?)|" +
+                        // . Digits ExponentPart_opt FloatTypeSuffix_opt
+                        "(\\.(" + Digits + ")(" + Exp + ")?)|" +
+                        // Hexadecimal strings
+                        "((" +
+                        // 0[xX] HexDigits ._opt BinaryExponent FloatTypeSuffix_opt
+                        "(0[xX]" + HexDigits + "(\\.)?)|" +
+                        // 0[xX] HexDigits_opt . HexDigits BinaryExponent FloatTypeSuffix_opt
+                        "(0[xX]" + HexDigits + "?(\\.)" + HexDigits + ")" +
+                        ")[pP][+-]?" + Digits + "))" +
+                        "[fFdD]?))" +
+                        "[\\x00-\\x20]*");// Optional trailing "whitespace"
+    }
+
 
     public Equation(String e) {
         checkEquation(e);
@@ -78,7 +85,7 @@ public class Equation {
         while (!e.isEmpty()) {
             String t = e.remove();
             if (operators.containsKey(t)) {
-                int nargs = operators.get(t);
+                int nargs = operators.get(t)[0];
                 if (s.size() < nargs) {
                     throw new IllegalArgumentException("Not enough arguments passed");
                 }
@@ -126,9 +133,10 @@ public class Equation {
     }
 
     private void parse(String[] args, ArrayDeque eq) {
+        Stack<String> operatorStack = new Stack<>();
         for (String t : args) {
             if (Pattern.matches(fpRegex, t)) {
-                eq.push(Double.valueOf(t));
+                eq.add(Double.valueOf(t));
             } else if (operators.containsKey(t)) {
 
             } else if (t.equals("(")) {
