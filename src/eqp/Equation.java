@@ -68,19 +68,14 @@ public class Equation {
         switch (operator) {
             case "+":
                 return args[0] + args[1];
-                break;
             case "-":
                 return args[0] - args[1];
-                break;
             case "*":
                 return args[0] * args[1];
-                break;
             case "/":
                 return args[0] / args[1];
-                break;
             case "^":
                 return Math.pow(args[0], args[1]);
-                break;
             default:
                 throw new IllegalStateException("Invalid operation");
         }
@@ -95,7 +90,9 @@ public class Equation {
     }
 
     private void parse(String e, ArrayDeque s) {
-
+        for (int i = 0; i < e.length(); i++) {
+            String t = Character.toString(e.charAt(i));
+        }
     }
 
 }
