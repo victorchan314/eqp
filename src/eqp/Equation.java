@@ -147,8 +147,9 @@ public class Equation {
                 }
                 operatorStack.push(t);
             } else if (t.equals("(")) {
-                eq.add(t);
+                operatorStack.push(t);
             } else if (t.equals(")")) {
+                System.out.println(operatorStack);
                 try {
                     while (!operatorStack.peek().equals("(")) {
                         eq.add(operatorStack.pop());
