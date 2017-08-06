@@ -130,7 +130,7 @@ public class Equation {
     }
 
     private static String clean(String o) {
-        return o.replaceAll("\\s", "").replaceAll("\\d"+x, "\\d\\*"+x);
+        return o.replaceAll("\\s", "").replaceAll("(?<=\\d)"+x, "\\*"+x);
     }
 
     private void parse(String[] args, ArrayDeque eq) {
