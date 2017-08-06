@@ -5,7 +5,7 @@ import eqp.Equation;
 public class Test {
 
     public static void main(String[] args) {
-        String equation = "(x+2)^3*2";
+        String equation = "2*(9x+5)^0.5-1";
         Equation e = new Equation(equation);
         System.out.println(e.evaluate(1));
         System.out.println(e.evaluate(5));

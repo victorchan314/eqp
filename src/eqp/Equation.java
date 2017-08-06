@@ -141,7 +141,7 @@ public class Equation {
             } else if (operators.containsKey(t)) {
                 if (!rightAssociative(t)) {
                     int precedence = getPrecedence(t);
-                    while (!operatorStack.isEmpty() && getPrecedence(operatorStack.peek()) >= precedence) {
+                    while (!operatorStack.isEmpty() && operators.containsKey(operatorStack.peek()) && getPrecedence(operatorStack.peek()) >= precedence) {
                         eq.add(operatorStack.pop());
                     }
                 }
@@ -149,7 +149,6 @@ public class Equation {
             } else if (t.equals("(")) {
                 operatorStack.push(t);
             } else if (t.equals(")")) {
-                System.out.println(operatorStack);
                 try {
                     while (!operatorStack.peek().equals("(")) {
                         eq.add(operatorStack.pop());
