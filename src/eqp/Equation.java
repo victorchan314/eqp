@@ -129,8 +129,8 @@ public class Equation {
 
     }
 
-    private String clean(String o) {
-        return o.replaceAll("\\s", "");
+    private static String clean(String o) {
+        return o.replaceAll("\\s", "").replaceAll("\\d"+x, "\\d\\*"+x);
     }
 
     private void parse(String[] args, ArrayDeque eq) {
