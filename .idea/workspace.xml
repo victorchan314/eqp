@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd3041d8-dfc4-4eab-8487-25988eeb0591" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/eqp/Equation.java" afterPath="$PROJECT_DIR$/src/eqp/Equation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test.java" afterPath="$PROJECT_DIR$/src/Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="Equation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="27" column="105" lean-forward="false" selection-start-line="27" selection-start-column="105" selection-end-line="27" selection-end-column="105" />
+            <state relative-caret-position="30">
+              <caret line="82" column="12" lean-forward="false" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##1;class#Equation#0" expanded="false" />
@@ -36,7 +36,7 @@
                 <element signature="e#6650#6651#0" expanded="true" />
                 <element signature="e#6700#6701#0" expanded="true" />
                 <element signature="e#6747#6748#0" expanded="true" />
-                <marker date="1501994462000" expanded="false" signature="1139:3147" ph="..." />
+                <marker date="1501994755000" expanded="false" signature="1139:3147" ph="..." />
               </folding>
             </state>
           </provider>
@@ -46,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+              <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -472,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="27" column="105" lean-forward="false" selection-start-line="27" selection-start-column="105" selection-end-line="27" selection-end-column="105" />
+        <state relative-caret-position="30">
+          <caret line="82" column="12" lean-forward="false" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##1;class#Equation#0" expanded="false" />
@@ -487,7 +487,7 @@
             <element signature="e#6650#6651#0" expanded="true" />
             <element signature="e#6700#6701#0" expanded="true" />
             <element signature="e#6747#6748#0" expanded="true" />
-            <marker date="1501994462000" expanded="false" signature="1139:3147" ph="..." />
+            <marker date="1501994755000" expanded="false" signature="1139:3147" ph="..." />
           </folding>
         </state>
       </provider>
@@ -495,7 +495,7 @@
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding />
         </state>
       </provider>
