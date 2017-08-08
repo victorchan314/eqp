@@ -24,6 +24,8 @@ public class Equation {
         operators.put("*", new Integer[]{2, 20, 0});
         operators.put("/", new Integer[]{2, 20, 0});
         operators.put("^", new Integer[]{2, 30, 1});
+        operators.put("sqrt", new Integer[]{1, 30, 1});
+        operators.put("abs", new Integer[]{1, 30, 1});
     }
     private static final String operator = "\\" + String.join("|\\", operators.keySet()) + "|\\(|\\)|" + x;
     private static final String equationSeparator = "((?<=(" + operator + "))|(?=(" + operator + ")))";
@@ -120,6 +122,10 @@ public class Equation {
                 return args[0] / args[1];
             case "^":
                 return Math.pow(args[0], args[1]);
+            case "sqrt":
+                return Math.pow(args[0], 0.5);
+            case "abs":
+                return Math.abs(args[0]);
             default:
                 throw new IllegalStateException("Invalid operation");
         }
