@@ -29,15 +29,18 @@ public class Equation {
         operators.put("sin", new Integer[]{1, 30, 1});
         operators.put("cos", new Integer[]{1, 30, 1});
         operators.put("tan", new Integer[]{1, 30, 1});
+        operators.put("ln", new Integer[]{1, 30, 1});
     }
-    private static final String operator = "\\" + String.join("|\\", operators.keySet()) + "|\\(|\\)|" + x;
 
-    private static final HashMap<String, Integer[]> keywords;
+    private static final HashMap<String, Double> keywords;
     static {
         keywords = new HashMap<>();
-        keywords.put("pi", new Integer[]{2, 10, 0});
+        keywords.put("pi", Math.PI);
+        keywords.put("e", Math.E);
     }
 
+    private static final String operator = "\\" + String.join("|\\", operators.keySet()) + "|\\(|\\)|"
+            + String.join("|\\", operators.keySet()) + x;
     private static final String equationSeparator = "(?<=(" + operator + "))|(?=(" + operator + "))";
 
     private static final String Digits;
