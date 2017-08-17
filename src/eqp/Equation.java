@@ -113,8 +113,6 @@ public class Equation {
                     args[i] = s.pop();
                 }
                 s.push(evaluateOperator(t, args));
-            } else if (keywords.containsKey(t)) {
-                s.push(keywords.get(t));
             } else if (t.equals(x)) {
                 s.push(n);
             } else {
@@ -189,6 +187,8 @@ public class Equation {
                 } catch (EmptyStackException e) {
                     throw new IllegalArgumentException("Parentheses mismatched");
                 }
+            } else if (keywords.containsKey(t)) {
+                eq.add(keywords.get(t));
             } else if (t.equals(x)) {
                 eq.add(t);
             } else {
