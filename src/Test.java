@@ -5,7 +5,7 @@ import eqp.Equation;
 public class Test {
 
     public static void main(String[] args) {
-        String equation = "sin("+Math.PI+"x)";
+        String equation = "ln(e)";
         Equation e = new Equation(equation);
         System.out.println(e.evaluate(1));
         System.out.println(e.evaluate(5));

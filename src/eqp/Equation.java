@@ -113,6 +113,8 @@ public class Equation {
                     args[i] = s.pop();
                 }
                 s.push(evaluateOperator(t, args));
+            } else if (keywords.containsKey(t)) {
+                s.push(keywords.get(t));
             } else if (t.equals(x)) {
                 s.push(n);
             } else {
