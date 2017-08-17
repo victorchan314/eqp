@@ -39,8 +39,8 @@ public class Equation {
         keywords.put("e", Math.E);
     }
 
-    private static final String operator = "\\" + String.join("|\\", operators.keySet()) + "|\\(|\\)|"
-            + String.join("|\\", operators.keySet()) + x;
+    private static final String operator = "\\" + String.join("|\\", operators.keySet())
+            + String.join("|", keywords.keySet()) + "|\\(|\\)|" + x;
     private static final String equationSeparator = "(?<=(" + operator + "))|(?=(" + operator + "))";
 
     private static final String Digits;
@@ -145,6 +145,8 @@ public class Equation {
                 return Math.cos(args[0]);
             case "tan":
                 return Math.tan(args[0]);
+            case "ln":
+                return Math.log(args[0]);
             default:
                 throw new IllegalStateException("Invalid operation");
         }
