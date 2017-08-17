@@ -211,16 +211,18 @@ public class Equation {
     }
 
     private static String[] createOrRegEx(Set<String> s) {
-        ArrayDeque<String> r = new ArrayDeque<>();
-        Iterator<String> i = s.iterator();
-        while (i.hasNext()) {
-            String t = i.next();
+        int l = s.size();
+        String[] r = new String[l];
+        Iterator<String> it = s.iterator();
+        for (int i = 0; i < l; i++) {
+            String t = it.next();
             if (t.length() > 1) {
-                r.addLast(t);
+                r[i] = t;
             } else {
-                r.addLast("\\" + t);
+                r[i] = "\\" + t;
             }
         }
+        return r;
     }
 
 }
