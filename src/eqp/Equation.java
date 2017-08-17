@@ -35,11 +35,11 @@ public class Equation {
     }
     private static String[] operatorsRegEx = createOrRegEx(operators.keySet());
 
-    private static final HashMap<String, Double> keywords;
+    private static final HashMap<String, String> keywords;
     static {
         keywords = new HashMap<>();
-        keywords.put("pi", Math.PI);
-        keywords.put("e", Math.E);
+        keywords.put("pi", Double.toString(Math.PI));
+        keywords.put("e", Double.toString(Math.E));
     }
 
     private static final String operator = "\\" + String.join("|", operatorsRegEx)
@@ -192,7 +192,7 @@ public class Equation {
             } else if (t.equals(x)) {
                 eq.add(t);
             } else {
-                throw new IllegalArgumentException("Illegal argument entered");
+                throw new IllegalArgumentException("Illegal argument entered: " + t);
             }
         }
         while (!operatorStack.isEmpty()) {
