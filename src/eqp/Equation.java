@@ -31,6 +31,7 @@ public class Equation {
         operators.put("tan", new Integer[]{1, 30, 1});
         operators.put("ln", new Integer[]{1, 30, 1});
     }
+    private static String[] operatorsRegEx = createOrRegEx(operators.keySet());
 
     private static final HashMap<String, Double> keywords;
     static {
@@ -39,7 +40,7 @@ public class Equation {
         keywords.put("e", Math.E);
     }
 
-    private static final String operator = "\\" + String.join("|\\", operators.keySet())
+    private static final String operator = "\\" + String.join("|\\", operatorsRegEx
             + String.join("|", keywords.keySet()) + "|\\(|\\)|" + x;
     private static final String equationSeparator = "(?<=(" + operator + "))|(?=(" + operator + "))";
 
@@ -206,5 +207,7 @@ public class Equation {
     private boolean rightAssociative(String t) {
         return operators.get(t)[2] == 1;
     }
+
+    private String createOrRegEx
 
 }
