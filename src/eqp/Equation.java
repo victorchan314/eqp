@@ -33,6 +33,21 @@ public class Equation {
     private static final String operator = "\\" + String.join("|\\", operators.keySet()) + "|\\(|\\)|" + x;
     private static final String equationSeparator = "((?<=(" + operator + "))|(?=(" + operator + ")))";
 
+    private static final HashMap<String, Integer[]> keywords;
+    static {
+        keywords = new HashMap<>();
+        keywords.put("+", new Integer[]{2, 10, 0});
+        keywords.put("-", new Integer[]{2, 10, 0});
+        keywords.put("*", new Integer[]{2, 20, 0});
+        keywords.put("/", new Integer[]{2, 20, 0});
+        keywords.put("^", new Integer[]{2, 30, 1});
+        keywords.put("sqrt", new Integer[]{1, 30, 1});
+        keywords.put("abs", new Integer[]{1, 30, 1});
+        keywords.put("sin", new Integer[]{1, 30, 1});
+        keywords.put("cos", new Integer[]{1, 30, 1});
+        keywords.put("tan", new Integer[]{1, 30, 1});
+    }
+
     private static final String Digits;
     private static final String HexDigits;
     private static final String Exp;
