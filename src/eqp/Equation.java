@@ -42,7 +42,7 @@ public class Equation {
         keywords.put("e", Math.E);
     }
 
-    private static final String operator = "\\" + String.join("|\\", operatorsRegEx)
+    private static final String operator = "\\" + String.join("|", operatorsRegEx)
             + String.join("|", keywords.keySet()) + "|\\(|\\)|" + x;
     private static final String equationSeparator = "(?<=(" + operator + "))|(?=(" + operator + "))";
 
