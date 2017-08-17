@@ -5,7 +5,7 @@ import eqp.Equation;
 public class Test {
 
     public static void main(String[] args) {
-        String equation = "ln(e)";
+        String equation = "ln(e^x)";
         Equation e = new Equation(equation);
         System.out.println(e.evaluate(1));
         System.out.println(e.evaluate(5));
