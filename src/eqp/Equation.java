@@ -4,6 +4,8 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 import java.util.ArrayDeque;
 import java.util.HashMap;
+import java.util.Set;
+import java.util.Iterator;
 import java.util.regex.Pattern;
 
 /**
@@ -40,7 +42,7 @@ public class Equation {
         keywords.put("e", Math.E);
     }
 
-    private static final String operator = "\\" + String.join("|\\", operatorsRegEx
+    private static final String operator = "\\" + String.join("|\\", operatorsRegEx)
             + String.join("|", keywords.keySet()) + "|\\(|\\)|" + x;
     private static final String equationSeparator = "(?<=(" + operator + "))|(?=(" + operator + "))";
 
@@ -208,6 +210,17 @@ public class Equation {
         return operators.get(t)[2] == 1;
     }
 
-    private String createOrRegEx
+    private static String[] createOrRegEx(Set<String> s) {
+        ArrayDeque<String> r = new ArrayDeque<>();
+        Iterator<String> i = s.iterator();
+        while (i.hasNext()) {
+            String t = i.next();
+            if (t.length() > 1) {
+                r.addLast(t);
+            } else {
+                r.addLast("\\" + t);
+            }
+        }
+    }
 
 }

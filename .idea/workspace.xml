@@ -18,30 +18,30 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Equation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Equation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+            <state relative-caret-position="285">
+              <caret line="220" column="33" lean-forward="false" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4039#4040#0" expanded="true" />
-                <element signature="e#4070#4071#0" expanded="true" />
-                <element signature="e#6075#6076#0" expanded="true" />
-                <element signature="e#6155#6156#0" expanded="true" />
-                <element signature="e#7606#7607#0" expanded="true" />
-                <element signature="e#7648#7649#0" expanded="true" />
-                <element signature="e#7691#7692#0" expanded="true" />
-                <element signature="e#7733#7734#0" expanded="true" />
+                <element signature="e#4089#4090#0" expanded="true" />
+                <element signature="e#4120#4121#0" expanded="true" />
+                <element signature="e#6125#6126#0" expanded="true" />
+                <element signature="e#6205#6206#0" expanded="true" />
+                <element signature="e#7656#7657#0" expanded="true" />
+                <element signature="e#7698#7699#0" expanded="true" />
+                <element signature="e#7741#7742#0" expanded="true" />
                 <element signature="e#7783#7784#0" expanded="true" />
-                <element signature="e#7830#7831#0" expanded="true" />
-                <marker date="1503005500000" expanded="true" signature="1780:3788" ph="..." />
+                <element signature="e#7833#7834#0" expanded="true" />
+                <element signature="e#7880#7881#0" expanded="true" />
+                <marker date="1503006190000" expanded="true" signature="1830:3838" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -469,32 +469,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="220" column="33" lean-forward="false" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4089#4090#0" expanded="true" />
+            <element signature="e#4120#4121#0" expanded="true" />
+            <element signature="e#6125#6126#0" expanded="true" />
+            <element signature="e#6205#6206#0" expanded="true" />
+            <element signature="e#7656#7657#0" expanded="true" />
+            <element signature="e#7698#7699#0" expanded="true" />
+            <element signature="e#7741#7742#0" expanded="true" />
+            <element signature="e#7783#7784#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
+            <element signature="e#7880#7881#0" expanded="true" />
+            <marker date="1503006190000" expanded="true" signature="1830:3838" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/eqp/Equation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4039#4040#0" expanded="true" />
-            <element signature="e#4070#4071#0" expanded="true" />
-            <element signature="e#6075#6076#0" expanded="true" />
-            <element signature="e#6155#6156#0" expanded="true" />
-            <element signature="e#7606#7607#0" expanded="true" />
-            <element signature="e#7648#7649#0" expanded="true" />
-            <element signature="e#7691#7692#0" expanded="true" />
-            <element signature="e#7733#7734#0" expanded="true" />
-            <element signature="e#7783#7784#0" expanded="true" />
-            <element signature="e#7830#7831#0" expanded="true" />
-            <marker date="1503005500000" expanded="true" signature="1780:3788" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
